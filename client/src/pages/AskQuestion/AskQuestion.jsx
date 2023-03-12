@@ -40,7 +40,7 @@ const AskQuestion = () => {
                     <div className="ask-form-container">
                         <label htmlFor="ask-ques-title">
                             <h4>Title</h4>
-                            <p>Be specific and imagine you’re asking a question to another person</p>
+                            <p>Be specific and imagine you’re asking a question to another gggg person</p>
                             <input type="text" id='ask-ques-title' onChange={(e)=>{setQuestionTitle(e.target.value)}} placeholder='e.g. Is there an R function for finding the index of an element in a vector?'/>
                         </label>
                         <label htmlFor="ask-ques-body">
