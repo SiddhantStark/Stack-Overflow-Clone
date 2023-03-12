@@ -13,7 +13,7 @@ const AskQuestion = () => {
     const [Question] = useState("");
     const handleSubmit=(e)=>{
         e.preventDefault()
-        if (User === null) {
+        if (User === 0) {
             alert("Login or Signup to answer a question");
             navigate("/Auth");
           } else {
