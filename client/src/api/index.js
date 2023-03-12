@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://stack528.netlify.app/' })
+const API = axios.create({ baseURL: 'https://stack528.netlify.app' })
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem("Profile")) {
