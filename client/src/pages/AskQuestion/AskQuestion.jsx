@@ -17,7 +17,7 @@ const AskQuestion = () => {
             alert("Login or Signup to answer a question");
             navigate("/Auth");
           } else {
-            if (<Question></Question> === "") {
+            if (Question === "") {
               alert("Enter an question before posting");
             }else{
     
