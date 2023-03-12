@@ -10,11 +10,20 @@ const AskQuestion = () => {
     const dispatch= useDispatch()
     const User=useSelector((state)=>(state.currentUserReducer))
     const navigate=useNavigate()
+    const [Question] = useState("");
     const handleSubmit=(e)=>{
         e.preventDefault()
+         if (User === null) {
+            alert("Login or Signup to answer a question");
+            navigate("/Auth");
+          } else {
+            if (<Question></Question> === "") {
+              alert("Enter an question before posting");
+            }else{
     
        // console.log({questionTitle, questionBody, questionTags})
        dispatch(askQuestion({ questionTitle, questionBody, questionTags, userPosted:User.result.name, userId: User?.result?._id},navigate))
+            }
 
     }
     const handleEnter=(e)=>{
