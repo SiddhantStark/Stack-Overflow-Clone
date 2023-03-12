@@ -13,7 +13,7 @@ const AskQuestion = () => {
     const [Question] = useState("");
     const handleSubmit=(e)=>{
         e.preventDefault()
-         if (User === null) {
+        if (User === null) {
             alert("Login or Signup to answer a question");
             navigate("/Auth");
           } else {
@@ -24,8 +24,8 @@ const AskQuestion = () => {
        // console.log({questionTitle, questionBody, questionTags})
        dispatch(askQuestion({ questionTitle, questionBody, questionTags, userPosted:User.result.name, userId: User?.result?._id},navigate))
             }
-
-    }
+            }
+}
     const handleEnter=(e)=>{
         if(e.key==='Enter'){
             setQuestionBody(questionBody + "\n")
