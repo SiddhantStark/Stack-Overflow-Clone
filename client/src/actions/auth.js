@@ -1,5 +1,5 @@
-
-import * as api from '../api'
+// importing all the things api exports 
+import * as api from '../api'; //like this
 import { setCurrentUser } from './currentUser'
 
 export const signup = (authData, navigate) => async (dispatch) => {

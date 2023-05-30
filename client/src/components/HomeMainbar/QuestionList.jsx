@@ -1,6 +1,8 @@
 import React from 'react'
 import Questions from './Questions'
 const QuestionList = ({questionsList}) => {
+  console.log("here")
+  console.log(questionsList);
   return (
     <>
     {

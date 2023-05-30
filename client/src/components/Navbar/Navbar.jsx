@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import decode from "jwt-decode";
-
 import logo from '../../assets/logo.png'
 import search from '../../assets/search-solid.svg'
 import Avatar from '../../components/Avatar/Avatar'
@@ -20,14 +19,17 @@ const Navbar = () => {
     dispatch(setCurrentUser(null));
   };
 
-  useEffect(() => {
-    const token = User?.token;
-    if (token) {
+  useEffect(()=>{
+    const token=User?.token;
+    if(token){
+      // decoding token 
       const decodedToken = decode(token);
-      if (decodedToken.exp * 1000 < new Date().getTime()) {
+      
+      if(decodedToken.exp * 1000 < new Date().getTime()) {
         handleLogout();
       }
     }
+    // dispatching set current user action
     dispatch(setCurrentUser(JSON.parse(localStorage.getItem("Profile"))));
   }, [User?.token, dispatch]);
 

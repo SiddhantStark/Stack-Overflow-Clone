@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://stack528.netlify.app' })
+// const API = axios.create({ baseURL: 'https://stack528.netlify.app' })
+const API = axios.create({ baseURL: 'http://localhost:5000'});
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem("Profile")) {
@@ -9,6 +10,7 @@ API.interceptors.request.use((req) => {
     return req;
   });
 
+// using authData and posting it in the backend
 export const logIn = (authData) => API.post('/user/login', authData);
 export const signUp = (authData) => API.post('/user/signup', authData);
 

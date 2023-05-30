@@ -5,6 +5,11 @@ import auth from '../middlewares/auth.js';
 const router= express.Router();
 router.post("/signup",signup);
 router.post("/login",login);
+
+router.post("/signup",()=>{});
+router.post("/login",()=>{});
+
 router.get('/getAllUsers', getAllUsers)
 router.patch('/update/:id', auth, updateProfile)
-export default router
+
+export default router;

@@ -23,7 +23,7 @@ const Auth = () => {
   }
 
   const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault() // to prevent the default settings of browser
         console.log({name,email,password})
         if (!email && !password){
             alert("Enter email and password")
@@ -32,9 +32,9 @@ const Auth = () => {
             if (!name){
                 alert("Enter name to continue")
             }
-            dispatch(signup({ name, email, password}, navigate))
+            dispatch(signup({ name, email, password}, navigate)) //dispatching email name and password
         }else{
-            dispatch(login({ email, password}, navigate))
+            dispatch(login({ email, password}, navigate)) //dispatching email and password
         }
     }
 

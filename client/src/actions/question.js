@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import * as api from '../api/index'
 
 export const askQuestion = (questionData, navigate) => async (dispatch) => {

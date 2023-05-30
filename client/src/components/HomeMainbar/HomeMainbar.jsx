@@ -4,11 +4,12 @@ import {Link, useLocation,useNavigate} from 'react-router-dom'
 import './HomeMainbar.css'
 import {useSelector } from 'react-redux'
 import QuestionList from'./QuestionList'
+
 const HomeMainbar = () => {
   const user=1;
-  const navigate=useNavigate()
-  const questionsList = useSelector((state) => state.questionsReducer)
-  // console.log(questionsList)
+  const navigate=useNavigate();
+  const questionsList = useSelector((state) => state.questionsReducer);
+  //console.log(questionsList)
   
 //   var questionsList = [{ 
 //        _id: 1,

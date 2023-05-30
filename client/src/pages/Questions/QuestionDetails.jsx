@@ -9,11 +9,7 @@ import downvote from "../../assets/sort-down.svg";
 import "./Questions.css";
 import Avatar from "../../components/Avatar/Avatar";
 import DisplayAnswer from "./DisplayAnswer";
-import {
-  postAnswer,
-  deleteQuestion,
-  voteQuestion,
-} from "../../actions/question";
+import {postAnswer,deleteQuestion,voteQuestion,} from "../../actions/question";
 
 const QuestionsDetails = () => {
   const { id } = useParams();
@@ -24,7 +20,8 @@ const QuestionsDetails = () => {
   const dispatch = useDispatch();
   const User = useSelector((state) => state.currentUserReducer);
   const location = useLocation();
-  const url = "https://stack528.netlify.app";
+  //const url = "https://stack528.netlify.app";
+  const url = "http://localhost:3000";
 
   const handlePostAns = (e, answerLength) => {
     
@@ -64,7 +61,7 @@ const QuestionsDetails = () => {
       alert("Login or Signup to up vote a question");
       Navigate("/Auth");
     } else {
-      dispatch(voteQuestion(id, "upVote"));
+      dispatch(voteQuestion(id, "upVote" , User.result._id));
     }
   };
 
@@ -73,7 +70,7 @@ const QuestionsDetails = () => {
       alert("Login or Signup to down vote a question");
       Navigate("/Auth");
     } else {
-      dispatch(voteQuestion(id, "downVote"));
+      dispatch(voteQuestion(id, "downVote" ,User.result._id));
     }
   };
   return (
