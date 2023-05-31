@@ -21,7 +21,7 @@ const QuestionsDetails = () => {
   const User = useSelector((state) => state.currentUserReducer);
   const location = useLocation();
   //const url = "https://stack528.netlify.app";
-  const url = "https://stack-overflow-clone-backend3.onrender.com/";
+  const url = "https://stack-overflow-clone-backend3.onrender.com";
 
   const handlePostAns = (e, answerLength) => {
     
